@@ -55,8 +55,10 @@ end
 for x in 0..79 do
   a=x/79.0
   y=f(a)
-  y=24-y*24
-  frame[y][x]="*"
+  if(y>=0&&y<=1)
+    y=24-y*24
+    frame[y][x]="*"
+  end
 end
 
 # printout
