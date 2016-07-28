@@ -37,9 +37,10 @@ frame[0][1] = 'Y'
 
 # draw graph
 for x in 0..79 do
-###
-### 分担2
-###
+  a=x/79.0
+  y=f(a)
+  y=24-y*24
+  frame[y][x]="*"
 end
 
 # printout
@@ -49,4 +50,3 @@ frame.each do |line|
   end
   print "\n"
 end
-
